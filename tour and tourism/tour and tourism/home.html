@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Aura</title>
+    <link rel="stylesheet" href="home.css">
+   
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home</a>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">Destinations</a>
+                        <div id="destinations">
+                            <div class="container">
+                                <h4>International</h4>
+                                <ul>
+                                    <li><a class="tour" href="International/Maldives.html">Maldives</a></li>
+                                    <li><a class="tour" href="International/Dubai.html">Dubai</a></li>
+                                    <li><a class="tour" href="#">Thailand</a></li>
+                                </ul>
+                            </div>
+                            <div class="container">
+                                <h4>Most Popular</h4>
+                                <ul>
+                                    <li><a class="tour" href="#">Leh Ladakh</a></li>
+                                    <li><a class="tour" href="#">Kashmir</a></li>
+                                    <li><a class="tour" href="#">Andaman & Nicobar Islands</a></li>
+                                    <li><a class="tour" href="#">Manali</a></li>
+                                    <li><a class="tour" href="#">Kerala</a></li>
+                                    <li><a class="tour" href="#">Spiti Valley</a></li>
+                                </ul>
+                            </div>
+                            <div class="container">
+                                <h4>Best Seller</h4>
+                                <ul>
+                                    <li><a class="tour" href="#">McLeod Ganj</a></li>
+                                    <li><a class="tour" href="#">Bir Billing</a></li>
+                                    <li><a class="tour" href="#">Goa</a></li>
+                                    <li><a class="tour" href="#">Kasol</a></li>
+                                    <li><a class="tour" href="#">Northeast</a></li>
+                                    <li><a class="tour" href="#">Uttarakhand</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <a class="item-link" href="#">Activities</a>
+                        <div id="Activities">
+                            <div class="container">
+                                <ul>
+                                    <li><a class="tour" href="#">Bungee Jumping</a></li>
+                                    <li><a class="tour" href="#">Camping</a></li>
+                                    <li><a class="tour" href="#">Moter Bikeing</a></li>
+                                    <li><a class="tour" href="#">Trikking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" Theme">
+                        <a class="item-link" href="#">Theme</a>
+                        <div id="Theme">
+                            <div class="container">
+                                <ul>
+                                    <li><a class="tour" href="#">Ladakh Tour Packages</a></li>
+                                    <li><a class="tour" href="#">Motorbiking Tours</a></li>
+                                    <li><a class="tour" href="#">College Tours</a></li>
+                                    <li><a class="tour" href="#">Family Tours</a></li>
+                                    <li><a class="tour" href="#">School Tours</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="section" id="home">
+        <h1>Welcome to Adventure Aura</h1>
+      <center>  <h1>Upcoming Holiday Packages</h1> </center>
+        <div class="card-container">
+            <div class="card">
+                <a href="International/Adaaran-Prestige-Vadoo.html ">
+
+                <img class="card-img-top" src="image/Adaaran-Prestige-Vadoo(m).jpg" alt="Adaaran-Prestige-Vadoo">
+                    </a>
+                <div class="card-body">
+                    <p class="card-text">Adaaran-Prestige-Vadoo Maldives package.<br><br> 80,000 INR</p>
+                </div>
+               
+            </div>
+            <div class="card">
+                <a href="International/FerrariWorld.html">
+                <img class="card-img-top" src="image\AmazingDubaiwithFerrariWorld.jfif" alt="Amazing Dubai with Ferrari World">
+                    </a>
+                <div class="card-body">
+                    <p class="card-text">Amazing Dubai with Ferrari World package.<br><br> 64,500 INR</p>
+                </div>
+                   
+            </div>
+
+            <div class="card">
+                <a href="">
+                <img class="card-img-top" src="image/camping.jpg" alt="camping">
+                    </a>
+                <div class="card-body">
+                    <p class="card-text">Campinng package.<br><br> 40,500 INR</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="section" id="pricing">
+        <h1>Activities</h1>
+        <p>Check out our competitive pricing plans.</p>
+    </div>
+    <script>
+        const images = [
+            'images/camping.jpg',
+            'image/manali1.jpg',
+            'image/goa.jpg'
+        ];
+
+        let currentIndex = 0;
+        const homeElement = document.querySelector('.home');
+
+        function changeBackgroundImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            homeElement.style.backgroundImage = `url(${images[currentIndex]})`;
+        }
+
+        setInterval(changeBackgroundImage, 3000);
+    </script>
+</body>
+</html>

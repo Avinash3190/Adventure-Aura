@@ -1,0 +1,29 @@
+.card-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+}
+
+
+.card {
+    width: 200px ;
+    display: inline-block;
+    margin: 1px;
+    width: 18rem;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 10px;
+}
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Aura</title>
+    <link rel="stylesheet" href="Maldives.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 60%;
+        }
+
+        .card {
+            width: calc(33% - 20px);
+            border: 1px solid #ccc;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .query-form {
+            width: 35%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+            .query-form h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .query-form form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .query-form label {
+                margin-bottom: 5px;
+            }
+
+            .query-form input,
+            .query-form textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .query-form button {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .query-form button:hover {
+                    background-color: #0056b3;
+                }
+    </style>
+</head>
+<body>
+    <h1>Explore Maldives Tours!</h1>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+               
+                    <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-beach-chill.jpg" alt="Card image 1">
+                    <div class="card-body"></div>
+                
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-First-Image.jpg" alt="Card image 2">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-First-Image.jpg" alt="Card image 3">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-top-view.jpg" alt="Card image 4">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-views.jpg" alt="Card image 5">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-in-room-pool.jpg" alt="Card image 6">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Adaaran-Prestige-Vadoo-night.jpg" alt="Card image 7">
+                <div class="card-body"></div>
+            </div>
+        </div>
+
+        <div class="query-form">
+            <h2>ADAARAN SELECT HUDHURAN FUSHI</h2>
+            <label for="price">80,000 INR</label><br ><br >
+            <form action="" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="number">Ph No:</label>
+                <input tyoe="number" id="number" name="number" required>
+                <label for="person">No person:</label>
+                <input tyoe="person" id="P_number" name="p_number" required>
+                <label for="Query">Query:</label>
+                <textarea id="Query" name="Query" required></textarea>
+                <button type="button" onclick="submitForm()">Enquire Now</button>
+                <button type="button" onclick="PayForm()">Pay Now</button>
+
+
+            </form>
+        </div>
+    </div>
+    <script>
+        
+        function submitForm() {
+   
+            alert("Enquire submitted successfully");
+        }
+
+        function PayForm() {
+            window.location.href = "payment.html";
+        }
+    </script>
+</body>
+</html>

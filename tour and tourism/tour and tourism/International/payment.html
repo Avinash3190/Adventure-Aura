@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Select Payment Method</h2>
+        <div class="payment-method">
+            <input type="radio" id="cardPayment" name="paymentMethod" value="card" checked />
+            <label for="cardPayment">Card Payment</label>
+            <input type="radio" id="upiPayment" name="paymentMethod" value="upi" />
+            <label for="upiPayment">UPI</label>
+        </div>
+
+        <h2>Payment Details</h2>
+        <form action="" method="post" id="paymentForm">
+            <div id="cardDetails">
+                <label for="cardNumber">Enter Card Number:</label>
+                <input type="number" id="cardNumber" name="cardNumber" placeholder="1234 5678 9101 1121" required>
+
+                <label for="cvv">Enter CVV:</label>
+                <input type="number" id="cvv" name="cvv" placeholder="123" required>
+
+                <label for="expireMonth">Expiry Date:</label>
+                <div class="expiry-inputs">
+                    <input type="number" id="expireMonth" name="expireMonth" min="1" max="12" placeholder="MM" required>
+                    <input type="number" id="expireYear" name="expireYear" min="2024" max="2100" placeholder="YYYY" required>
+                </div>
+            </div>
+
+            <div id="upiDetails">
+                <label for="upiId">Enter UPI ID:</label>
+                <input type="text" id="upiId" name="upiId" placeholder="example@bank">
+            </div>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const cardPayment = document.getElementById('cardPayment');
+        const upiPayment = document.getElementById('upiPayment');
+        const cardDetails = document.getElementById('cardDetails');
+        const upiDetails = document.getElementById('upiDetails');
+
+        cardPayment.addEventListener('click', function () {
+            cardDetails.style.display = 'block';
+            upiDetails.style.display = 'none';
+        });
+
+        upiPayment.addEventListener('click', function () {
+            cardDetails.style.display = 'none';
+            upiDetails.style.display = 'block';
+        });
+
+        function validateForm() {
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+            if (paymentMethod === 'card') {
+                const cardNumber = document.getElementById('cardNumber').value;
+                const cvv = document.getElementById('cvv').value;
+                const expireMonth = document.getElementById('expireMonth').value;
+                const expireYear = document.getElementById('expireYear').value;
+
+                if (cardNumber.length !== 16) {
+                    alert("Card number must be 16 digits");
+                    return;
+                }
+                if (cvv.length !== 3) {
+                    alert("CVV must be 3 digits");
+                    return;
+                }
+                if (expireMonth < 1 || expireMonth > 12) {
+                    alert("Invalid expiry month");
+                    return;
+                }
+                if (expireYear.length !== 4 || expireYear < new Date().getFullYear()) {
+                    alert("Invalid expiry year");
+                    return;
+                }
+            } else if (paymentMethod === 'upi') {
+                const upiId = document.getElementById('upiId').value;
+                if (upiId === "") {
+                    alert("Please enter a valid UPI ID");
+                    return;
+                }
+            }
+
+            alert("Form submitted successfully");
+            document.getElementById('paymentForm').submit();
+        }
+    </script>
+</body>
+</html>

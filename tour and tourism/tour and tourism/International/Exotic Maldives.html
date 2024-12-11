@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Aura</title>
+    <link rel="stylesheet" href="ExoticMaldives.css">
+    
+</head>
+<body>
+    <h1>Explore Maldives Tours!</h1>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\couple.jfif" alt="Card image 1">
+                <div class="card-body"></div>
+
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\island.jfif" alt="Card image 2">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Islands1.jfif" alt="Card image 3">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\travel.jfif" alt="Card image 4">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\images.jpeg" alt="Card image 5">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\Pic.jfif" alt="Card image 6">
+                <div class="card-body"></div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="C:\Users\HP\Desktop\tour and tourism\image\images.jfif" alt="Card image 7">
+                <div class="card-body"></div>
+            </div>
+        </div>
+
+        <div class="query-form">
+            <h2>Exotic Maldives</h2>
+            <label for="price">77,500 INR</label><br><br>
+            <form action="" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="number">Ph No:</label>
+                <input tyoe="number" id="number" name="number" required>
+                <label for="person">No person:</label>
+                <input tyoe="person" id="P_number" name="p_number" required>
+                <label for="Query">Query:</label>
+                <textarea id="Query" name="Query" required></textarea>
+                <button type="button" onclick="submitForm()">Enquire Now</button>
+                <button type="button" onclick="PayForm()">Pay Now</button>
+
+
+            </form>
+        </div>
+    </div>
+    <script>
+
+        function submitForm() {
+
+            alert("Enquire submitted successfully");
+        }
+
+        function PayForm() {
+            window.location.href = "payment.html";
+        }
+    </script>
+</body>
+</html>
